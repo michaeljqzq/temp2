@@ -13,7 +13,7 @@ node {
   }
 
   stage('Build') {
-    azureIoTEdgePush dockerRegistryType: 'acr', acrName: 'zhiqing' , modulesToBuild: '*', azureCredentialId: 'azuresp', resourceGroup: 'zhiqing', rootPath: './'
+    azureIoTEdgePush dockerRegistryType: 'acr', acrName: 'zhiqing' , bypassModules: '', azureCredentialId: 'azuresp', resourceGroup: 'zhiqing', rootPath: './'
   }
 
   stage('Deploy') {
